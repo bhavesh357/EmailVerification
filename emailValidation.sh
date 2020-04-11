@@ -1,9 +1,8 @@
 echo Welcome to email verification
-pat=""
 
 function validate() {
 	email=$1
-	pat="[A-Za-z\d]{1,}"
+	pat="[\w\d]{1,}@[\w\d]{1,}"
 	if [[ $email =~ $pat ]]
 	then
 		echo good email
