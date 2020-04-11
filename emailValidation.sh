@@ -2,7 +2,7 @@ echo Welcome to email verification
 
 function validate() {
 	email=$1
-	pat="[\w\d]{1,}@[\w\d]{1,}.(com|co|net).?"
+	pat="[\w\d]{1,}[.\-#!]?[\w\d]{1,}@[\w\d]{1,}.(com|co|net).?([a-z]{2})?"
 	if [[ $email =~ $pat ]]
 	then
 		echo good email
